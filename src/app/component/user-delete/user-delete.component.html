@@ -1,0 +1,22 @@
+<div class="card my-5">
+    <div class="card-body">
+
+      <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users" (click)="RowSelected(user)">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+          </tr>
+        </tbody>
+
+        <button class="btn btn-info" (click)="delete()">Delete</button>
+      </table>
+
+    </div>
+  </div>
